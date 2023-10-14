@@ -4,4 +4,25 @@
   border: none;
   outline: none;
   box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+.input-label,
+input {
+  font-weight: 700;
+}
+.input-label {
+  color: #716f6f;
+  font-size: 12px;
+  display: block;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 56px;
+  font-style: italic;
+  font-weight: 800;
+}
+.accent {
+  color: #854dff;
 }
