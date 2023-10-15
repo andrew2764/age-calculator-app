@@ -12,7 +12,7 @@ body {
 }
 
 main {
-  padding: 5em 0;
+  padding-top: 5em;
 }
 
 .container {
@@ -47,7 +47,7 @@ input {
 input {
   border: solid 1px #dcdcdc;
   width: 100%;
-  padding: 1em 1.25em;
+  padding: 0.75em 1em;
   border-radius: 12px;
 }
 
@@ -58,6 +58,11 @@ button {
   border-radius: 100%;
   margin: 0 auto;
   transform: translateY(50%);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #151515;
 }
 
 button img {
@@ -77,4 +82,38 @@ h1 {
 }
 .accent {
   color: #854dff;
+}
+
+@media (min-width: 700px) {
+  .container {
+    max-width: 840px;
+  }
+
+  .input--container {
+    width: 80%;
+  }
+
+  .input-label {
+    font-size: 14px;
+  }
+
+  input {
+    padding: 0.5em 1em;
+    font-size: 32px;
+  }
+
+  button {
+    padding: 2em;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  button img {
+    width: 44px;
+    height: 44px;
+  }
+
+  h1 {
+    font-size: 104px;
+  }
 }
