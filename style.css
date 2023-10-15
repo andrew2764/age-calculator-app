@@ -7,6 +7,27 @@
   font-family: "Poppins";
 }
 
+body {
+  background-color: #f0f0f0;
+}
+
+main {
+  padding: 5em 0;
+}
+
+.container {
+  background-color: white;
+  width: 90%;
+  max-width: 350px;
+  margin: 0 auto;
+  border-radius: 24px 24px 100px 24px;
+  padding: 4em 1.25em 3em;
+}
+
+#form {
+  margin-bottom: 2.5em;
+}
+
 .input-label,
 input {
   font-weight: 700;
@@ -18,10 +39,41 @@ input {
   text-transform: uppercase;
 }
 
+.input--container {
+  display: flex;
+  gap: 1em;
+}
+
+input {
+  border: solid 1px #dcdcdc;
+  width: 100%;
+  padding: 1em 1.25em;
+  border-radius: 12px;
+}
+
+button {
+  background-color: #854dff;
+  display: flex;
+  padding: 1em;
+  border-radius: 100%;
+  margin: 0 auto;
+  transform: translateY(50%);
+}
+
+button img {
+  width: 24px;
+  height: 24px;
+}
+
+hr {
+  border: solid 1px #dcdcdc;
+}
+
 h1 {
   font-size: 56px;
   font-style: italic;
   font-weight: 800;
+  line-height: 1.25em;
 }
 .accent {
   color: #854dff;

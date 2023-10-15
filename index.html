@@ -20,20 +20,26 @@
 
   <main>
     <div class="container">
-      <form>
-        <div>
-          <label class="input-label" for="day-input">Day</label>
-          <input type="number" placeholder="DD" id="day-input"></input>
+      <form id="form">
+        <div class="input--container">
+          <div>
+            <label class="input-label" for="day-input">Day</label>
+            <input type="text" placeholder="DD" id="day-input"></input>
+          </div>
+          <div>
+            <label class="input-label" for="month-input">Month</label>
+            <input type="text" placeholder="MM" id="month-input"></input>
+          </div>
+          <div>
+            <label class="input-label" for="year-input">Year</label>
+            <input type="text" placeholder="YYYY" id="year-input"></input>
+          </div>
         </div>
-        <div>
-          <label class="input-label" for="month-input">Month</label>
-          <input type="number" placeholder="MM" id="month-input"></input>
-        </div>
-        <div>
-          <label class="input-label" for="year-input">Year</label>
-          <input type="number" placeholder="YYYY" id="year-input"></input>
-        </div>
-        <button type="submit"><img src="./assets/images/icon-arrow.svg" alt=""></button>
+
+        <button type="submit">
+          <img src="./assets/images/icon-arrow.svg" alt="submit">
+        </button>
+        <hr />
       </form>
       <h1><span class="accent" id="years">--</span> years</h1>
       <h1><span class="accent" id="months">--</span> months</h1>
