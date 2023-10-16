@@ -28,6 +28,22 @@ main {
   margin-bottom: 2.5em;
 }
 
+#form .error label {
+  color: #ff5959;
+}
+#form .error input {
+  border-color: #ff5959;
+}
+
+#form .error-message {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 8px;
+  color: #ff5959;
+  margin-top: 0.5em;
+  height: 0;
+}
+
 .input-label,
 input {
   font-weight: 700;
