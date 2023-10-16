@@ -105,6 +105,10 @@ h1 {
     max-width: 840px;
   }
 
+  #form .error-message {
+    font-size: 14px;
+  }
+
   .input--container {
     width: 80%;
   }
