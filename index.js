@@ -2,6 +2,7 @@ const dayInput = document.getElementById("day-input");
 const monthInput = document.getElementById("month-input");
 const yearInput = document.getElementById("year-input");
 const form = document.getElementById("form");
+const DAY_IN_MILLISECONDS = 24 * 60 * 60 * 1000;
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -52,7 +53,29 @@ form.addEventListener("submit", (e) => {
     setErrorState(dayInput, "Must be a valid date");
     setErrorState(monthInput);
     setErrorState(yearInput);
+    valid = false;
   }
+
+  if (!valid) {
+    return;
+  }
+
+  let yearsPassed = now.getFullYear() - inputDate.getFullYear();
+  let monthsPassed = now.getMonth() - inputDate.getMonth();
+  let daysPassed = now.getDate() - inputDate.getDate();
+  if (monthsPassed < 0) {
+    yearsPassed -= 1;
+    monthsPassed += 12;
+  }
+  if (daysPassed < 0) {
+    monthsPassed -= 1;
+    daysPassed += new Date(+yearInput.value, +monthInput.value, 0).getDate();
+  }
+
+  document.getElementById("years").innerText = yearsPassed;
+  document.getElementById("months").innerText =
+    monthsPassed < 10 ? "0" + monthsPassed : monthsPassed;
+  document.getElementById("days").innerText = daysPassed;
 });
 
 function resetUI() {
